@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
+    <div className='flex flex-col justify-center px-24 gap-6'>
       <Navbar/>
       <Hero/>
+      </div>
     </>
   )
 }
