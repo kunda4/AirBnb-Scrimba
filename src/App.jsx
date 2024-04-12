@@ -12,7 +12,7 @@ function App() {
     img = {element.coverImg}
     rating = {element.stats.rating}
     reviewCount = {element.stats.reviewCount}
-    country = {element.location}
+    location = {element.location}
     title = {element.description}
     price = {element.price}
     openSpots = {element.openSpots}
