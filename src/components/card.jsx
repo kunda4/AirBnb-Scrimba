@@ -2,7 +2,8 @@ import PropType from 'prop-types'
 export default function Card(props){
 
     return(
-        <div className="w-96 h-72">
+        <div className="w-96 h-72 relative">
+            {!props.openSpots &&<div className='absolute top-0 left-0 px-2 font-semibold uppercase py-1 mx-2 my-2 bg-white rounded-sm'>Sold Out</div>}
             <img src={props.img} 
             alt="Image on Airbnb"
             className="rounded-lg"/>
@@ -14,8 +15,8 @@ export default function Card(props){
             <span className="text-[#918E9B]">{props.reviewCount} . </span>
             <span className="text-[#918E9B]">{props.country}</span>
             </div>
-            <h5>{props.title}</h5>
-            <h5 className="font-bold">From {props.price} <span className="font-normal">/ person</span></h5>
+            <span>{props.title}</span>
+            <p className="font-bold">From {props.price} <span className="font-normal">/ person</span></p>
         </div>
     )
 }
@@ -26,4 +27,6 @@ Card.propTypes = {
     country: PropType.string.isRequired,
     title: PropType.string.isRequired,
     price: PropType.number.isRequired,
+    openSpots: PropType.number
+
 }

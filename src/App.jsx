@@ -15,6 +15,7 @@ function App() {
     country = {element.location}
     title = {element.description}
     price = {element.price}
+    openSpots = {element.openSpots}
   />
   )
  })
