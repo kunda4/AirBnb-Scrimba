@@ -8,14 +8,8 @@ function App() {
  const cards = data.map((element) => {
   return (
     <Card
-    key={element}
-    img = {element.coverImg}
-    rating = {element.stats.rating}
-    reviewCount = {element.stats.reviewCount}
-    location = {element.location}
-    title = {element.description}
-    price = {element.price}
-    openSpots = {element.openSpots}
+    key={element.id}
+    {...element}
   />
   )
  })
@@ -24,7 +18,7 @@ function App() {
     <div>
       <Navbar/>
       <Hero/>
-      <div className="flex justify-center gap-6 px-24 py-8">
+      <div className="flex justify-center gap-6 px-24 py-10">
         {cards}</div>
       </div>
     </>
